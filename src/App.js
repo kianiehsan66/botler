@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+
+import Fab from '@mui/material/Fab';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
 import './App.css';
+import { useState } from 'react';
+import Drawer from '@mui/material/Drawer';
+import ChatBox from './ChatBox';
 
 function App() {
+
+
+
+
+
+  const [drawerState, setDrawerState] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className='App'>
+      <div className='Fab'>
+        <Fab color="secondary" aria-label="add" onClick={() => setDrawerState(true)}>
+          <SmartToyIcon />
+        </Fab>
+        <Drawer
+          anchor="bottom"
+          open={drawerState}
+          onClose={() => setDrawerState(false)}
         >
-          Learn React
-        </a>
-      </header>
+          <ChatBox />
+        </Drawer>
+
+      </div>
+
     </div>
   );
 }

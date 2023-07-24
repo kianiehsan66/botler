@@ -1,0 +1,19 @@
+
+.LeftPop{
+    width: 250px;
+    background-color: gainsboro;
+    text-overflow: ellipsis;
+    overflow: hidden;
+   
+}
+.RightPop{
+    width: 250px;
+    background-color: yellowgreen;
+    float: right; 
+   margin-top: 20px;
+}
+.PopBox{
+    margin: 20px;
+    height: 50px;
+
+}
